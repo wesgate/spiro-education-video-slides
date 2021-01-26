@@ -91,7 +91,7 @@ export default {
           }
         },
         {
-          title: 'Greater Cohokia',
+          title: 'Greater Cahokia',
           content: '2:19',
           image: require('@/assets/images/1-bg.png'),
           video: {
