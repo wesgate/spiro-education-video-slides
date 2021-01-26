@@ -8,7 +8,7 @@
       <div class="control-wrapper bg-red w-full p-12 pt-32">
         <Logo />
         <h1 class="text-center text-3xl text-white uppercase tracking-widest mt-8 mb-12">
-          Watch Experts Discusss Spiro, the Mississippian World and it's people.
+          Watch Experts Discuss Spiro, the Mississippian World and it's people.
         </h1>
         <h3>
           <nuxt-link class="video-play-button" to="/videos/">
