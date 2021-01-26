@@ -1,7 +1,7 @@
 <template>
   <div class="slideshow-wrap">
     <v-idle
-      :duration="300"
+      :duration="210"
       :events="idle.events"
       @idle="onidle"
     />
@@ -11,6 +11,7 @@
         :slide-ratio="1 / 2"
         :bullets="false"
         :autoplay="false"
+        fixed-height="90vh"
         @slide="$refs.vueperslides2 && $refs.vueperslides2.goToSlide($event.currentSlide.index, { emit: false })"
       >
         <vueper-slide
@@ -23,10 +24,11 @@
 
       <vueper-slides
         ref="vueperslides2"
+        class="nav-slides"
         :slide-ratio="1 / 8"
         :dragging-distance="50"
         :visible-slides="6"
-        fixed-height="100px"
+        fixed-height="10vh"
         :gap="1"
         @slide="$refs.vueperslides1 && $refs.vueperslides1.goToSlide($event.currentSlide.index, { emit: false })"
       >
@@ -39,10 +41,13 @@
         >
           <template #content>
             <div class="vueperslide__content-wrapper">
-              <div class="vueperslide__title">
+              <div class="icon text-xs border-2 border-orange border border-solid rounded-full h-8 w-8 flex justify-center items-center text-center">
+                <font-awesome-icon class="fa-fw" icon="play" />
+              </div>
+              <div class="vueperslide__title text-xl mb-0 uppercase font-bold">
                 {{ slide.title.toString() }}
               </div>
-              <div class="vueperslide__content">
+              <div class="vueperslide__content text-sm">
                 {{ slide.content.toString() }}
               </div>
             </div>
@@ -71,84 +76,89 @@ export default {
       },
       slides: [
         {
-          title: 'Spiro',
-          content: 'Spiro Video.',
-          image: 'https://i.ytimg.com/vi_webp/ehJg_OlcjpE/maxresdefault.webp',
+          title: 'Early Spiro',
+          content: '1:28',
+          image: require('@/assets/images/1-bg.png'),
           video: {
             mp4: require('@/assets/video/spiro.mp4'),
             props: {
               controls: true,
               controlsList: 'nodownload nofullscreen',
               disablePictureInPicture: true,
-              poster: 'https://i.ytimg.com/vi_webp/ehJg_OlcjpE/maxresdefault.webp',
+              poster: require('@/assets/images/1-bg.jpg'),
               autoplay: true
             }
           }
         },
         {
-          title: 'Cohokia',
-          content: 'Cohokia video.',
+          title: 'Greater Cohokia',
+          content: '2:19',
+          image: require('@/assets/images/1-bg.png'),
           video: {
             mp4: require('@/assets/video/cohokia.mp4'),
             props: {
               controls: true,
               controlsList: 'nodownload nofullscreen',
               disablePictureInPicture: true,
-              poster: 'https://i.ytimg.com/vi_webp/ehJg_OlcjpE/maxresdefault.webp',
+              poster: require('@/assets/images/1-bg.jpg'),
               autoplay: false
             }
           }
         },
         {
-          title: 'Etowah',
-          content: 'Etowah video.',
+          title: 'Evolution of Etowah',
+          content: '1:09',
+          image: require('@/assets/images/1-bg.png'),
           video: {
             mp4: require('@/assets/video/etowah.mp4'),
             props: {
               controls: true,
               controlsList: 'nodownload nofullscreen',
               disablePictureInPicture: true,
-              poster: 'https://i.ytimg.com/vi_webp/ehJg_OlcjpE/maxresdefault.webp',
+              poster: require('@/assets/images/1-bg.jpg'),
               autoplay: false
             }
           }
         },
         {
           title: 'Kincaid',
-          content: 'Kincaid video.',
+          content: '3:02',
+          image: require('@/assets/images/1-bg.png'),
           video: {
             mp4: require('@/assets/video/kincaid.mp4'),
             props: {
               controls: true,
               controlsList: 'nodownload nofullscreen',
               disablePictureInPicture: true,
-              poster: 'https://i.ytimg.com/vi_webp/ehJg_OlcjpE/maxresdefault.webp'
+              poster: require('@/assets/images/1-bg.jpg')
             }
           }
         },
         {
           title: 'Mississippian',
-          content: 'Mississippian video.',
+          content: '0:52',
+          image: require('@/assets/images/1-bg.png'),
           video: {
             mp4: require('@/assets/video/mississippian.mp4'),
             props: {
               controls: true,
               controlsList: 'nodownload nofullscreen',
               disablePictureInPicture: true,
-              poster: 'https://i.ytimg.com/vi_webp/ehJg_OlcjpE/maxresdefault.webp'
+              poster: require('@/assets/images/1-bg.jpg')
             }
           }
         },
         {
           title: 'Moundville',
-          content: 'Moundville video.',
+          content: '1:04',
+          image: require('@/assets/images/1-bg.png'),
           video: {
             mp4: require('@/assets/video/moundville.mp4'),
             props: {
               controls: true,
               controlsList: 'nodownload nofullscreen',
               disablePictureInPicture: true,
-              poster: 'https://i.ytimg.com/vi_webp/ehJg_OlcjpE/maxresdefault.webp'
+              poster: require('@/assets/images/1-bg.jpg')
             }
           }
         }
@@ -170,7 +180,7 @@ export default {
 }
 
 .slideshow-wrap {
-  @apply text-center mx-auto w-full bg-red;
+  @apply text-center mx-auto w-full bg-navy;
 }
 
 .vueperslide video {
@@ -180,13 +190,31 @@ export default {
 }
 
 .vueperslide .vueperslide__content-wrapper {
-  -webkit-transform: scale(.9);
-  transform: scale(.9);
+  -webkit-transform: scale(.75);
+  transform: scale(.75);
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   opacity: .4;
-  -webkit-filter: blur(1px);
-  filter: blur(1px);
+}
+
+.nav-slides {
+  @apply bg-red;
+}
+
+.nav-slides .vueperslide {
+  @apply bg-red text-orange;
+}
+
+.nav-slides .vueperslide.vueperslide--active {
+  @apply bg-navy border-b-4 border-orange border-solid;
+}
+
+.vueperslide.vueperslide--active .vueperslide__content-wrapper {
+  box-shadow: none !important;
+}
+
+.vueperslide.vueperslide--active .vueperslide__content-wrapper .icon {
+  display: none;
 }
 
 .vueperslide.vueperslide--active .vueperslide__content-wrapper {
