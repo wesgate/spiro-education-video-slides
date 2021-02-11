@@ -28,6 +28,7 @@
         :slide-ratio="1 / 8"
         :dragging-distance="50"
         :visible-slides="6"
+        :bullets="false"
         fixed-height="10vh"
         :gap="1"
         @slide="$refs.vueperslides1 && $refs.vueperslides1.goToSlide($event.currentSlide.index, { emit: false })"
@@ -229,6 +230,7 @@ export default {
   width: 1100px;
   margin: 0 auto;
   margin-top: 50px;
+  max-height: 100%;
 }
 
 .vueperslide .vueperslide__content-wrapper {
