@@ -1,14 +1,14 @@
 <template>
   <div class="bg-red h-screen">
     <video id="videoBG" autoplay muted loop class="h-screen w-screen fixed">
-      <source :src="require('@/assets/video/spiro.mp4')" type="video/mp4">
+      <source src="https://ncm-touch-screen.s3.amazonaws.com/spiro-education-videos/02-Getting-Started.mp4" type="video/mp4">
     </video>
     <div class="bg-navy absolute h-screen w-screen opacity-90" />
     <div class="relative h-screen flex items-center justify-center">
       <div class="control-wrapper bg-red w-full p-12 pt-32">
         <Logo />
         <h1 class="text-center text-3xl text-white uppercase tracking-widest mt-8 mb-12">
-          Watch Experts Discuss Spiro, the Mississippian World and it's people.
+          Learn more about Cahokia
         </h1>
         <h3>
           <nuxt-link class="video-play-button" to="/videos/">

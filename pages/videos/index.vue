@@ -76,11 +76,11 @@ export default {
       },
       slides: [
         {
-          title: 'Early Spiro',
-          content: '1:28',
+          title: 'Introduction',
+          content: '1:20',
           image: require('@/assets/images/1-bg.png'),
           video: {
-            mp4: require('@/assets/video/spiro.mp4'),
+            mp4: 'https://ncm-touch-screen.s3.amazonaws.com/spiro-education-videos/01-Introduction.mp4',
             props: {
               controls: true,
               controlsList: 'nodownload nofullscreen',
@@ -91,11 +91,11 @@ export default {
           }
         },
         {
-          title: 'Greater Cahokia',
-          content: '2:19',
+          title: 'Getting Started',
+          content: '1:29',
           image: require('@/assets/images/1-bg.png'),
           video: {
-            mp4: require('@/assets/video/cohokia.mp4'),
+            mp4: 'https://ncm-touch-screen.s3.amazonaws.com/spiro-education-videos/02-Getting-Started.mp4',
             props: {
               controls: true,
               controlsList: 'nodownload nofullscreen',
@@ -106,11 +106,11 @@ export default {
           }
         },
         {
-          title: 'Evolution of Etowah',
-          content: '1:09',
+          title: 'Digging up the Past',
+          content: '2:10',
           image: require('@/assets/images/1-bg.png'),
           video: {
-            mp4: require('@/assets/video/etowah.mp4'),
+            mp4: 'https://ncm-touch-screen.s3.amazonaws.com/spiro-education-videos/03-Digging-Up-The-Past.mp4',
             props: {
               controls: true,
               controlsList: 'nodownload nofullscreen',
@@ -121,11 +121,11 @@ export default {
           }
         },
         {
-          title: 'Kincaid',
-          content: '3:02',
+          title: 'City of the Sun',
+          content: '2:27',
           image: require('@/assets/images/1-bg.png'),
           video: {
-            mp4: require('@/assets/video/kincaid.mp4'),
+            mp4: 'https://ncm-touch-screen.s3.amazonaws.com/spiro-education-videos/04-City-of-the-Sun.mp4',
             props: {
               controls: true,
               controlsList: 'nodownload nofullscreen',
@@ -135,11 +135,11 @@ export default {
           }
         },
         {
-          title: 'Mississippian',
-          content: '0:52',
+          title: 'America Before Columbus',
+          content: '1:25',
           image: require('@/assets/images/1-bg.png'),
           video: {
-            mp4: require('@/assets/video/mississippian.mp4'),
+            mp4: 'https://ncm-touch-screen.s3.amazonaws.com/spiro-education-videos/05-America-Before-Columbus.mp4',
             props: {
               controls: true,
               controlsList: 'nodownload nofullscreen',
@@ -149,11 +149,53 @@ export default {
           }
         },
         {
-          title: 'Moundville',
-          content: '1:04',
+          title: 'Anchient-Architects',
+          content: '1:32',
           image: require('@/assets/images/1-bg.png'),
           video: {
-            mp4: require('@/assets/video/moundville.mp4'),
+            mp4: 'https://ncm-touch-screen.s3.amazonaws.com/spiro-education-videos/06-Ancient-Architects.mp4',
+            props: {
+              controls: true,
+              controlsList: 'nodownload nofullscreen',
+              disablePictureInPicture: true,
+              poster: require('@/assets/images/1-bg.jpg')
+            }
+          }
+        },
+        {
+          title: 'Cahokia Day by Day',
+          content: '2:17',
+          image: require('@/assets/images/1-bg.png'),
+          video: {
+            mp4: 'https://ncm-touch-screen.s3.amazonaws.com/spiro-education-videos/07-Cahokia-Day-By-Day.mp4',
+            props: {
+              controls: true,
+              controlsList: 'nodownload nofullscreen',
+              disablePictureInPicture: true,
+              poster: require('@/assets/images/1-bg.jpg')
+            }
+          }
+        },
+        {
+          title: 'Supernaturals & the Cosmos',
+          content: '2:43',
+          image: require('@/assets/images/1-bg.png'),
+          video: {
+            mp4: 'https://ncm-touch-screen.s3.amazonaws.com/spiro-education-videos/08-Supernaturals-and-the-Cosmos.mp4',
+            props: {
+              controls: true,
+              controlsList: 'nodownload nofullscreen',
+              disablePictureInPicture: true,
+              poster: require('@/assets/images/1-bg.jpg')
+            }
+          }
+        },
+        {
+          title: 'Conclusion',
+          content: '0:50',
+          image: require('@/assets/images/1-bg.png'),
+          video: {
+            mp4: 'https://ncm-touch-screen.s3.amazonaws.com/spiro-education-videos/09-Conclusion.mp4',
             props: {
               controls: true,
               controlsList: 'nodownload nofullscreen',
@@ -184,7 +226,7 @@ export default {
 }
 
 .vueperslide video {
-  width: 1600px;
+  width: 1100px;
   margin: 0 auto;
   margin-top: 50px;
 }

@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'spiro-video-slides',
+    title: 'spiro-education-video-slides',
     htmlAttrs: {
       lang: 'en'
     },
